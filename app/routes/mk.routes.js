@@ -9,6 +9,7 @@ module.exports = function(app) {
         next();
     });
 
-    app.get('/mk-attractions', controller.getAllMKAttractions);
-    app.get('/mk-attractions-by-location/:location_id', controller.MKAttractionsByLocation);
+    app.get('/attractions-by-park/:park_id', controller.AttractionsByPark);
+    app.get('/attractions-by-location/:location_id', controller.AttractionsByLocation);
+    app.get('/attraction/:attraction_id', controller.AttractionInfo);
 };
