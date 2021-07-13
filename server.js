@@ -2,7 +2,13 @@ const mysql = require('mysql');
 const express = require('express');
 const app = express();
 const db = require('./app/config/db.config');
+const cors = require('cors');
 
+var corsOption = {
+  origin: '*'
+};
+
+app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
